@@ -1,0 +1,27 @@
+# AI / agent workflow files (never commit or push to GitHub)
+AGENTS.md
+agents.md
+CLAUDE.md
+claude.md
+GEMINI.md
+gemini.md
+HANDOFF.md
+handoff.md
+HANDSOFF.md
+STATE.json
+state.json
+prompts/
+reports/
+logs/
+.agents/
+.gemini/
+.claude/
+.cursor/
+
+# Python & caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.env
+.DS_Store
