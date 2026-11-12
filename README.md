@@ -9,6 +9,11 @@
 
 ---
 
+![ConfSieve Architecture Concept](assets/confsieve-architecture-concept.png)
+*Figure 1: Conceptual overview of ConfSieve comparing Python AST lookups against YAML, JSON, and TOML manifests.*
+
+---
+
 ## The Problem
 
 Modern applications externalize configuration into manifest files (`config.yaml`, `config.json`, `config.toml`, `settings.json`). Over time, code and configuration files silently drift out of sync:
@@ -26,6 +31,13 @@ Modern applications externalize configuration into manifest files (`config.yaml`
    - `database.pool_size` vs `db.pool_size` passes standard YAML/JSON linters because the syntax is valid, yet the application fails at runtime.
 
 `ConfSieve` solves this by statically comparing your codebase's AST lookups against your configuration manifests, providing instant feedback in your terminal or CI/CD pipeline with **zero external dependencies**.
+
+---
+
+## Live Terminal Demo
+
+![ConfSieve Terminal Demo](assets/confsieve-terminal-demo.svg)
+*Figure 2: Reproducible terminal output from `python3 demo.py` detecting ghost keys and zombie manifest entries.*
 
 ---
 
